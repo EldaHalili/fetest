@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid Example</title>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-gap: 20px; /* Gap between grid items */
+        align-items: center; /* Align items vertically */
+    }
+
+    .grid-item {
+        border: 1px solid #ddd; /* Border for visualization */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .big-picture {
+        grid-column: 1 / span 2; /* Span two columns */
+    }
+
+    .button {
+        margin-top: 10px; /* Spacing between image and button */
+    }
+</style>
+</head>
+<body>
+    <section class="grid-container">
+        <div class="grid-item big-picture">
+            <img src="big-image.jpg" alt="Big Image">
+        </div>
+        <div class="grid-item">
+            <img src="small-image1.jpg" alt="Small Image 1">
+            <button class="button">Button 1</button>
+        </div>
+        <div class="grid-item">
+            <img src="small-image2.jpg" alt="Small Image 2">
+            <button class="button">Button 2</button>
+        </div>
+    </section>
+</body>
+</html>

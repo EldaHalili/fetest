@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Grid and Flexbox Example</title>
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns */
+        grid-gap: 20px; /* Gap between grid items */
+        align-items: center; /* Align items vertically */
+    }
+
+    .grid-item {
+        border: 1px solid #ddd; /* Border for visualization */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .big-picture {
+        grid-column: 1 / span 1; /* Span one column */
+        grid-row: 1 / span 3; /* Span three rows */
+    }
+
+    .button {
+        margin-top: 10px; /* Spacing between image and button */
+    }
+
+    /* Adjust size of Small Image 1 */
+    .grid-item:nth-child(2) img {
+        width: 150px; /* Adjust width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust size of Small Image 2 */
+    .grid-item:nth-child(3) img {
+        width: 200px; /* Adjust width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Flexbox for product items */
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .product {
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        width: 200px;
+    }
+
+    .product img {
+        width: 150px;
+        height: auto;
+    }
+
+    .product-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+<body>
+    <section class="grid-container">
+        <div class="grid-item big-picture">
+            <img src="https://via.placeholder.com/2550x550" alt="Big Picture">
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/300x300" alt="Small Image 1">
+            <button class="button">Button 1</button>
+        </div>
+        <div class="grid-item">
+            <img src="https://via.placeholder.com/300x300" alt="Small Image 2">
+            <button class="button">Button 2</button>
+        </div>
+    </section>
+
+    <!-- Product items -->
+    <div class="product-container">
+        <div class="product">
+            <div class="product-title">Product 1</div>
+            <img src="https://via.placeholder.com/150" alt="Tatto supplies">
+            <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
+        </div>
+        <div class="product">
+            <div class="product-title">Product 2</div>
+            <img src="https://via.placeholder.com/150" alt="Product 2">
+            <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
+        </div>
+        <div class="product">
+            <div class="product-title">Product 3</div>
+            <img src="https://via.placeholder.com/150" alt="Product 3">
+            <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
+        </div>
+        <div class="product">
+            <div class="product-title">Product 4</div>
+            <img src="https://via.placeholder.com/150" alt="Product 4">
+            <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
+        </div>
+        <div class="product">
+            <div class="product-title">Product 5</div>
+            <img src="https://via.placeholder.com/150" alt="Product 5">
+            <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
+        </div>
+    
+    </div>
+</body>
+</html>
