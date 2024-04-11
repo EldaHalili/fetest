@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Showcase</title>
+<title>Products</title>
 <style>
     /* Flexbox container */
     .container {
@@ -84,6 +84,21 @@
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+        .product {
+            width: calc(50% - 20px); /* Two products per row */
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .product {
+            width: 100%; /* Single product per row */
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 </style>
 </head>
@@ -167,4 +182,3 @@
 
 </body>
 </html>
-

@@ -8,23 +8,34 @@
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two columns */
-        grid-gap: 20px; /* Gap between grid items */
+        grid-gap: 10px; /* Gap between grid items */
         align-items: center; /* Align items vertically */
+
+        
     }
 
     .grid-item {
         border: 1px solid #ddd; /* Border for visualization */
-        padding: 20px;
-        text-align: center;
+        padding: 90px;
+        align-items: center;
     }
 
     .big-picture {
         grid-column: 1 / span 1; /* Span one column */
-        grid-row: 1 / span 3; /* Span three rows */
+        grid-row: 1 / span 2; /* Span three rows */
+        object-fit: fill;
     }
 
     .button {
         margin-top: 10px; /* Spacing between image and button */
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
     }
 
     /* Adjust size of Small Image 1 */
@@ -35,8 +46,9 @@
 
     /* Adjust size of Small Image 2 */
     .grid-item:nth-child(3) img {
-        width: 200px; /* Adjust width */
+        width: 150px; /* Adjust width */
         height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
     }
 
     /* Flexbox for product items */
@@ -45,6 +57,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
     }
+    
 
     .product {
         margin: 10px;
@@ -67,43 +80,43 @@
 <body>
     <section class="grid-container">
         <div class="grid-item big-picture">
-            <img src="https://via.placeholder.com/600x400" alt="Big Picture">
+            <img src="https://via.placeholder.com/600x400/green" alt="The Eagle Picture">
         </div>
         <div class="grid-item">
-            <img src="https://via.placeholder.com/300x300" alt="Small Image 1">
-            <button class="button">Button 1</button>
+            <img src="https://via.placeholder.com/1250x550/brown" alt="First image on the right side">
+            <button class="button">Shop Now</button>
         </div>
         <div class="grid-item">
-            <img src="https://via.placeholder.com/300x300" alt="Small Image 2">
-            <button class="button">Button 2</button>
+            <img src="https://via.placeholder.com/1250x550/#000000" alt="Second Image on the right side">
+            <button class="button">Shop Now</button>
         </div>
     </section>
 
     <!-- Product items -->
     <div class="product-container">
         <div class="product">
-            <div class="product-title">Product 1</div>
+            <div class="product-title">Tattoo Supplies</div>
             <img src="https://via.placeholder.com/150" alt="Tatto supplies">
             <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
         </div>
         <div class="product">
-            <div class="product-title">Product 2</div>
-            <img src="https://via.placeholder.com/550" alt="Product 2">
+            <div class="product-title">Body Jewelry</div>
+            <img src="https://via.placeholder.com/150" alt="Body Jewelry">
             <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
         </div>
         <div class="product">
-            <div class="product-title">Product 3</div>
-            <img src="https://via.placeholder.com/150" alt="Product 3">
+            <div class="product-title">Piercing Supplies</div>
+            <img src="https://via.placeholder.com/150" alt="Piercing Supplies">
             <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
         </div>
         <div class="product">
-            <div class="product-title">Product 4</div>
-            <img src="https://via.placeholder.com/150" alt="Product 4">
+            <div class="product-title">Medical Supplies</div>
+            <img src="https://via.placeholder.com/150" alt="Medical Supplies">
             <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
         </div>
         <div class="product">
-            <div class="product-title">Product 5</div>
-            <img src="https://via.placeholder.com/150" alt="Product 5">
+            <div class="product-title">Permanent Makeup</div>
+            <img src="https://via.placeholder.com/150" alt="Permanent Makeup">
             <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
         </div>
     
