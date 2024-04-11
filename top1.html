@@ -20,9 +20,9 @@
         align-items: center;
     }
 
-    .big-picture {
+    .big-picture {/*styling the image on the right side */
         grid-column: 1 / span 1; /* Span one column */
-        grid-row: 1 / span 2; /* Span three rows */
+        grid-row: 1 / span 2; /* Span tow rows */
         object-fit: fill;
     }
 
@@ -36,19 +36,24 @@
         cursor: pointer;
         display: block;
         margin: 0 auto;
+        margin-top: 10px;
     }
 
     /* Adjust size of Small Image 1 */
-    .grid-item:nth-child(2) img {
-        width: 150px; /* Adjust width */
+    .grid-item2 {
+        width: 100%; /* Adjust width */
         height: auto; /* Maintain aspect ratio */
+        border: 1px solid #ddd;
+        overflow: hidden;
     }
 
+
     /* Adjust size of Small Image 2 */
-    .grid-item:nth-child(3) img {
-        width: 150px; /* Adjust width */
+    .grid-item3 {
+        width: 100%; /* Adjust width */
         height: auto; /* Maintain aspect ratio */
-        object-fit: cover;
+        border: 1px solid #ddd;
+        overflow: hidden;
     }
 
     /* Flexbox for product items */
@@ -59,7 +64,7 @@
     }
     
 
-    .product {
+    .product { 
         margin: 10px;
         padding: 10px;
         text-align: center;
@@ -68,12 +73,19 @@
 
     .product img {
         width: 150px;
-        height: auto;
+        height: 150px;
     }
 
     .product-title {
         font-weight: bold;
         margin-bottom: 5px;
+    }
+    .placeholder {
+        width: 150px;
+        height: 150px;
+        background-color: #ddd;
+        border-radius: 10px;
+        overflow: hidden;
     }
 </style>
 </head>
@@ -82,12 +94,12 @@
         <div class="grid-item big-picture">
             <img src="https://via.placeholder.com/600x400/green" alt="The Eagle Picture">
         </div>
-        <div class="grid-item">
-            <img src="https://via.placeholder.com/1250x550/brown" alt="First image on the right side">
+        <div class="grid-item2">
+            <img src="https://via.placeholder.com/500x235/brown" alt="First image on the right side">
             <button class="button">Shop Now</button>
         </div>
-        <div class="grid-item">
-            <img src="https://via.placeholder.com/1250x550/#000000" alt="Second Image on the right side">
+        <div class="grid-item3">
+            <img src="https://via.placeholder.com/500x235/#000000" alt="Second Image on the right side">
             <button class="button">Shop Now</button>
         </div>
     </section>
@@ -114,12 +126,14 @@
             <img src="https://via.placeholder.com/150" alt="Medical Supplies">
             <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
         </div>
-        <div class="product">
+        <div class="product"> <!-- another way of editing products -->
             <div class="product-title">Permanent Makeup</div>
-            <img src="https://via.placeholder.com/150" alt="Permanent Makeup">
+            <div class="placeholder"></div>
+            
             <button class="button" onclick="window.open('about:blank', '_blank')">Shop Now</button>
         </div>
-    
+
     </div>
 </body>
+<footer> </footer>
 </html>
